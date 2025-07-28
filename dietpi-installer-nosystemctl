@@ -903,8 +903,11 @@ setenv rootuuid "true"' /boot/boot.cmd
 		#------------------------------------------------------------------------------------------------
 
 		G_DIETPI-NOTIFY 2 'Disabling apt-daily services to prevent random APT cache lock'
+		echo "."
 
 		G_DIETPI-NOTIFY 2 'Purging configs/data of removed packages'
+		echo "."
+
 		local apackages=()
 		mapfile -t apackages < <(dpkg -l | grep -v '^ii ' | tail +6)
 		[[ ${apackages[0]} ]] && G_AGP "${apackages[@]}"
