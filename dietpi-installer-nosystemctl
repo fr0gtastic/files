@@ -903,7 +903,6 @@ setenv rootuuid "true"' /boot/boot.cmd
 		#------------------------------------------------------------------------------------------------
 
 		G_DIETPI-NOTIFY 2 'Disabling apt-daily services to prevent random APT cache lock'
-		for i in apt-daily{,-upgrade}.{service,timer}
 
 		G_DIETPI-NOTIFY 2 'Purging configs/data of removed packages'
 		local apackages=()
